@@ -141,6 +141,7 @@ void ChooseCharacter()
     LCD.SetFontColor(WHITE);
     LCD.DrawRectangle(218,50,40,40);
     LCD.FillRectangle(218,50,40,40); 
+    DrawChar1();
     /*name label*/
     LCD.SetFontColor(GRAY);
     LCD.WriteAt("CHARACTER",75,65);
@@ -153,8 +154,10 @@ void ChooseCharacter()
     LCD.SetFontColor(WHITE);
     LCD.DrawRectangle(218,100,40,40);
     LCD.FillRectangle(218,100,40,40); 
+    DrawChar2();
     LCD.SetFontColor(GRAY);
     LCD.WriteAt("CHARACTER",75,115);
+    
 
     /*CHARACTER 3*/
     LCD.SetFontColor(WHITE);
@@ -164,9 +167,13 @@ void ChooseCharacter()
     LCD.SetFontColor(WHITE);
     LCD.DrawRectangle(218,150,40,40);
     LCD.FillRectangle(218,150,40,40); 
+    DrawChar3();
     LCD.SetFontColor(GRAY);
     LCD.WriteAt("CHARACTER",75,165);
+}
 
+void DrawChar1()
+{
     //TEST CHARACTER
     LCD.SetFontColor(PINK);
     LCD.DrawRectangle(228,160,20,20);
@@ -197,7 +204,10 @@ void ChooseCharacter()
     LCD.DrawRectangle(228,160,20,20);
     LCD.DrawRectangle(229,157,6,4);
     LCD.DrawRectangle(241,157,6,4);
+}
 
+void DrawChar2()
+{
     /*TEST CHARCTER*/
     LCD.SetFontColor(CHOCOLATE);
     LCD.DrawRectangle(228,110,20,20);
@@ -238,12 +248,32 @@ void ChooseCharacter()
     LCD.DrawLine(231,132,245,132);
     LCD.DrawLine(230,130,230,132);
     LCD.DrawLine(245,130,245,132);
+}
 
-
-
-     
-
-
+void DrawChar3()
+{
+    /*TEST CHARACTER 3*/
+    /*outline face*/
+    LCD.SetFontColor(0xFBEC5D);
+    LCD.DrawRectangle(228,60,20,20);
+    LCD.FillRectangle(228,60,20,20); 
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(228,67,7,2);
+    LCD.FillRectangle(228,67,7,2); 
+    LCD.DrawRectangle(241,67,7,2);
+    LCD.FillRectangle(241,67,7,2); 
+    LCD.SetFontColor(BLACK);
+    LCD.DrawRectangle(231,67,2,2);
+    LCD.FillRectangle(231,67,2,2); 
+    LCD.DrawRectangle(243,67,2,2);
+    LCD.FillRectangle(243,67,2,2); 
+    LCD.DrawRectangle(228,60,20,20);
+    LCD.SetFontColor(DARKORANGE);
+    LCD.DrawCircle(238,72,2);
+    LCD.FillCircle(238,72,2);
+    LCD.DrawLine(238,76,240,74);
+    LCD.DrawLine(238,76,236,74);
+    LCD.DrawLine(238,76,238,74);
 }
 
 int main()
