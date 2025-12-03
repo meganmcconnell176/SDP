@@ -42,28 +42,35 @@ void DrawMenu()
     LCD.Update();
 }
 
+/*return to main menu function*/
 void ReturnHome()
 {
+    /*make button*/
     LCD.SetFontColor(WHITE);
     LCD.DrawRectangle(10,210,120,20);
     LCD.FillRectangle(10,210,120,20);
+    /*add label*/
     LCD.SetFontScale(0.5);
     float currentScale = LCD.GetFontScale();
     LCD.SetFontColor(GRAY);
     LCD.WriteAt("Return to Homepage",15,213);
 }
 
+/*main menu 1 -begins game creation*/
 void PlayGame()
 {
+    /*make button*/
     LCD.SetFontColor(WHITE);
     LCD.DrawRectangle(10,180,120,20);
     LCD.FillRectangle(10,180,120,20);
+    /*add label*/
     LCD.SetFontScale(0.5);
     float currentScale = LCD.GetFontScale();
     LCD.SetFontColor(GRAY);
     LCD.WriteAt("Continue to Game",20,184);
 }
 
+/*main menu 2 -statistics function*/
 void statistics()
 {
     LCD.SetFontColor(GRAY);
@@ -72,6 +79,7 @@ void statistics()
     LCD.WriteAt("Level 3 Best Time: 03:15:21",75,110); 
 }
 
+/*main menu 3 - how to play*/
 void HowToPlay()
 {
     LCD.SetFontColor(GRAY);
@@ -81,6 +89,7 @@ void HowToPlay()
     LCD.WriteAt("Good luck and have fun!",80,125);
 }
 
+/*main menu 4 - credits*/
 void credits()
 {
     LCD.WriteAt("Authors: Megan McConnell and Costa Zografos",30,80); 
@@ -88,6 +97,7 @@ void credits()
     LCD.WriteAt("mulator/programming-syntax",55,120); 
 }
 
+/*level selection function*/
 void ChooseLevel()
 {
     /*write title*/
@@ -114,11 +124,156 @@ void ChooseLevel()
     LCD.WriteAt("Level 3: Hard",120,165);
 }
 
+
 void ChooseCharacter()
 {
     /*write title*/
     LCD.SetFontColor(GRAY);
     LCD.WriteLine("Select Character");
+
+    /*create character options*/
+    /*CHARACTER 1*/
+    /*name box*/
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(63,50,150,40);
+    LCD.FillRectangle(63,50,150,40); 
+    /*image box*/
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(218,50,40,40);
+    LCD.FillRectangle(218,50,40,40); 
+    DrawChar1();
+    /*name label*/
+    LCD.SetFontColor(GRAY);
+    LCD.WriteAt("CHARACTER",75,65);
+
+    /*CHARACTER 2*/
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(63,100,150,40);
+    LCD.FillRectangle(63,100,150,40); 
+    /*image box*/
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(218,100,40,40);
+    LCD.FillRectangle(218,100,40,40); 
+    DrawChar2();
+    LCD.SetFontColor(GRAY);
+    LCD.WriteAt("CHARACTER",75,115);
+    
+
+    /*CHARACTER 3*/
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(63,150,150,40);
+    LCD.FillRectangle(63,150,150,40); 
+    /*image box*/
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(218,150,40,40);
+    LCD.FillRectangle(218,150,40,40); 
+    DrawChar3();
+    LCD.SetFontColor(GRAY);
+    LCD.WriteAt("CHARACTER",75,165);
+}
+
+void DrawChar1()
+{
+    //TEST CHARACTER
+    LCD.SetFontColor(PINK);
+    LCD.DrawRectangle(228,160,20,20);
+    LCD.FillRectangle(228,160,20,20);
+    LCD.DrawRectangle(229,157,6,3);
+    LCD.FillRectangle(229,157,6,3);
+    LCD.DrawRectangle(241,157,6,3);
+    LCD.FillRectangle(241,157,6,3); 
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(228,166,7,2);
+    LCD.FillRectangle(228,166,7,2); 
+    LCD.DrawRectangle(241,166,7,2);
+    LCD.FillRectangle(241,166,7,2); 
+    LCD.SetFontColor(BLACK);
+    LCD.DrawRectangle(231,166,2,2);
+    LCD.FillRectangle(231,166,2,2); 
+    LCD.DrawRectangle(243,166,2,2);
+    LCD.FillRectangle(243,166,2,2); 
+    LCD.SetFontColor(DARKSALMON);
+    LCD.DrawRectangle(233,171,10,5);
+    LCD.FillRectangle(233,171,10,5); 
+    LCD.SetFontColor(INDIANRED);
+    LCD.DrawRectangle(235,172,2,3);
+    LCD.FillRectangle(235,172,2,3); 
+    LCD.DrawRectangle(239,172,2,3);
+    LCD.FillRectangle(239,172,2,3); 
+    LCD.SetFontColor(BLACK);
+    LCD.DrawRectangle(228,160,20,20);
+    LCD.DrawRectangle(229,157,6,4);
+    LCD.DrawRectangle(241,157,6,4);
+}
+
+void DrawChar2()
+{
+    /*TEST CHARCTER*/
+    LCD.SetFontColor(CHOCOLATE);
+    LCD.DrawRectangle(228,110,20,20);
+    LCD.FillRectangle(228,110,20,20); 
+    LCD.DrawRectangle(229,107,6,3);
+    LCD.FillRectangle(229,107,6,3);
+    LCD.DrawRectangle(241,107,6,3);
+    LCD.FillRectangle(241,107,6,3);
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(228,114,7,2);
+    LCD.FillRectangle(228,114,7,2); 
+    LCD.DrawRectangle(241,114,7,2);
+    LCD.FillRectangle(241,114,7,2); 
+    LCD.SetFontColor(BLACK);
+    LCD.DrawRectangle(228,110,20,20);
+    LCD.SetFontColor(BROWN);
+    LCD.DrawRectangle(231,120,14,12);
+    LCD.FillRectangle(231,120,14,12);
+    LCD.DrawRectangle(233,118,10,4);
+    LCD.FillRectangle(233,118,10,4);
+    LCD.SetFontColor(BLACK);
+    /*eyes*/
+    LCD.DrawRectangle(231,114,2,2);
+    LCD.FillRectangle(231,114,2,2);
+    LCD.DrawRectangle(243,114,2,2);
+    LCD.FillRectangle(243,114,2,2);  
+    LCD.DrawRectangle(229,107,6,4);
+    LCD.DrawRectangle(241,107,6,4);
+    /*nose and mouth*/
+    LCD.DrawLine(238,120,238,129);
+    LCD.DrawLine(238,128,240,130);
+    LCD.DrawLine(238,128,236,130);
+    LCD.DrawLine(236,130,234,128);
+    LCD.DrawLine(240,130,242,128);
+    LCD.DrawRectangle(236,118,4,2);
+    LCD.FillRectangle(236,118,4,2);
+    /*outline bottom of face*/
+    LCD.DrawLine(231,132,245,132);
+    LCD.DrawLine(230,130,230,132);
+    LCD.DrawLine(245,130,245,132);
+}
+
+void DrawChar3()
+{
+    /*TEST CHARACTER 3*/
+    /*outline face*/
+    LCD.SetFontColor(0xFBEC5D);
+    LCD.DrawRectangle(228,60,20,20);
+    LCD.FillRectangle(228,60,20,20); 
+    LCD.SetFontColor(WHITE);
+    LCD.DrawRectangle(228,67,7,2);
+    LCD.FillRectangle(228,67,7,2); 
+    LCD.DrawRectangle(241,67,7,2);
+    LCD.FillRectangle(241,67,7,2); 
+    LCD.SetFontColor(BLACK);
+    LCD.DrawRectangle(231,67,2,2);
+    LCD.FillRectangle(231,67,2,2); 
+    LCD.DrawRectangle(243,67,2,2);
+    LCD.FillRectangle(243,67,2,2); 
+    LCD.DrawRectangle(228,60,20,20);
+    LCD.SetFontColor(DARKORANGE);
+    LCD.DrawCircle(238,72,2);
+    LCD.FillCircle(238,72,2);
+    LCD.DrawLine(238,76,240,74);
+    LCD.DrawLine(238,76,236,74);
+    LCD.DrawLine(238,76,238,74);
 }
 
 int main()
@@ -132,7 +287,7 @@ int main()
     /*initialize values*/
     bool homescreen = true;
     bool choosingLevel = false;
-    int selectedLevel = 0;  // Will store 1, 2, or 3
+    int selectedLevel = 0;  
 
     while(true){
         /* Wait until the user touches the screen */
@@ -188,6 +343,7 @@ int main()
         }
         else
         {
+            /*if user chooses to return to the main menu*/
             while (!LCD.Touch(&x,&y)){}
              if (x >= 10 && x <= 130 && y >= 210 && y <= 230)
             {
@@ -203,6 +359,7 @@ int main()
                 choosingLevel = true;
             }
 
+            /*while user chooses a level*/
             if (choosingLevel == true)
             {
                 /*user selects level 1*/
@@ -211,10 +368,11 @@ int main()
                     selectedLevel = 1;
                     choosingLevel = false; 
                     LCD.Clear();
+                    /*next screen is choose character*/
                     ChooseCharacter();
                 }
 
-                 /*user selects level 2*/
+                /*user selects level 2*/
                 if (x >= 110 && x <= 210 && y >= 100 && y <= 140)
                 {
                     selectedLevel = 2;
@@ -239,12 +397,12 @@ int main()
         
     }   
 
-        while (1) {
+        while (1)
+        {
             LCD.Update();
             // Never end
         }
         return 0;
-
 }       
 
 
